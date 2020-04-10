@@ -13,5 +13,12 @@
         "label": "Woot"
       }
     ]
-  }
+  },
+  "blocks": [
+    {
+      "image": "",
+      "_template": "ImageBlock",
+      "content": ""
+    }
+  ]
 }
