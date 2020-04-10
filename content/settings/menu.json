@@ -5,7 +5,8 @@
       "link": "/",
       "subMenu": [
         {
-          "label": "What's "
+          "label": "What's good",
+          "link": "/about"
         }
       ]
     },
