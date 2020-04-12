@@ -16,6 +16,13 @@
   },
   "blocks": [
     {
+      "name": "Form",
+      "recipient": "",
+      "fields": [],
+      "_template": "FormBlock",
+      "content": ""
+    },
+    {
       "image": "",
       "_template": "ImageBlock",
       "content": ""
