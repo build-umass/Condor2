@@ -1,5 +1,46 @@
-const path = require(`path`)
-const { GraphQLBoolean } = require("gatsby/graphql")
+class Node {
+  constructor(data, next = null) {
+    this.data = data;
+    this.next = next;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.size = 0;
+  }
+
+  add(data) {
+    let newNode = new Node(data);
+    if(this.head == null) {
+      this.head = newNode;
+    } else {
+      this.tail.next = newNode;
+    }
+    this.tail = newNode;
+    this.size++;
+    return this.head;
+  }
+
+  iterate() {
+    let dataArr = [];
+    let curr = this.head;
+    while(curr != null) {
+      // console.log(curr.data);
+      dataArr.push({"link": curr.data});
+      curr = curr.next;
+    }
+    return dataArr;
+  }
+
+}
+
+
+const path = require(`path`);
+const { GraphQLBoolean } = require("gatsby/graphql");
+const axios = require('axios');
 
 exports.setFieldsOnGraphQLNodeType = ({ type }) => {
   // if the node is a markdown file, add the `published` field
@@ -142,6 +183,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   `)
+  let list = new LinkedList();
 
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
@@ -149,6 +191,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.pages.edges.forEach(({ node }) => {
+    list.add(node.path);
     createPage({
       path: node.path,
       component: path.resolve(`src/templates/page.js`),
@@ -158,7 +201,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.posts.edges.forEach(({ node }) => {
     if (!node.published) return
-
+    list.add(node.frontmatter.path);
     createPage({
       path: node.frontmatter.path,
       component: path.resolve(`src/templates/post.js`),
@@ -167,6 +210,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
   result.data.lists.edges.forEach(({ node }) => {
+    list.add(node.path);
     const listPageTemplate = path.resolve(`src/templates/list.js`)
     const listType = node.listType
     const allPosts = result.data.posts.edges
@@ -193,6 +237,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           currentPage: currentPage,
         },
       })
-    })
-  })
+    });
+  });
+  let linkArr = list.iterate();
+  console.log(linkArr);
+  axios.post
 }

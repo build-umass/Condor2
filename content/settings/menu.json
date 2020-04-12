@@ -2,7 +2,13 @@
   "menuItems": [
     {
       "label": "Home",
-      "link": "/"
+      "link": "/",
+      "subMenu": [
+        {
+          "label": "What's good",
+          "link": "/about"
+        }
+      ]
     },
     {
       "label": "About",
@@ -14,7 +20,10 @@
     },
     {
       "label": "Contact",
-      "link": "/contact"
+      "link": "/contactme"
     }
-  ]
+  ],
+  "__gatsby_resolved": {
+    "fileRelativePath": "/content/settings/menu.json"
+  }
 }
