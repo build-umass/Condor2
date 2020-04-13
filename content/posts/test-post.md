@@ -1,15 +1,14 @@
 ---
 title: Nostris blandis iacuit
-path: /blog/nostris-blandis
-date: '2019-04-06'
+path: /nostris-blandis
+date: 2020-04-06T04:00:00.000Z
 type: post
 draft: false
 hero:
   overlay: true
   large: false
 ---
-Nostris blandis iacuit Laertiadaeque est Tritona, [pectora si
-tantum](http://valens.io/haec.php) tantumque missus quoque plumis **Atlante da** generum meminitque exstat!
+I love you!
 
 > Obstruat _manusque nunc_, est arces equum caelo, ore Lelex proceres **sit
 > stabit** limbo campis hoc. Clara utque Acheronta neque aer transcurrere
