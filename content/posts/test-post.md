@@ -1,7 +1,7 @@
 ---
 title: Nostris blandis iacuit
 path: /nostris-blandis
-date: 2020-04-06T04:00:00.000Z
+date: '2020-04-06T04:00:00.000Z'
 type: post
 draft: false
 hero:

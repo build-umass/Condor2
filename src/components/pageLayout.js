@@ -45,7 +45,7 @@ export const PageLayout = ({ page, children }) => {
     }
   `)
 
-  useGlobalJsonForm(data.nav, NavForm)
+  // useGlobalJsonForm(data.nav, NavForm)
   useGlobalJsonForm(data.theme, ThemeForm)
   useGlobalJsonForm(data.site, SiteForm)
 

@@ -2,25 +2,7 @@
   "menuItems": [
     {
       "label": "Home",
-      "link": "/",
-      "subMenu": [
-        {
-          "label": "What's good",
-          "link": "/about"
-        }
-      ]
-    },
-    {
-      "label": "About",
-      "link": "/about"
-    },
-    {
-      "label": "Blog",
-      "link": "/blog"
-    },
-    {
-      "label": "Contact",
-      "link": "/contactme"
+      "link": "/"
     }
   ],
   "__gatsby_resolved": {

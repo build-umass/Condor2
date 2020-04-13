@@ -7,7 +7,6 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.6",
     "focus-visible": "^5.0.2",
     "gatsby": "^2.20.13",
@@ -49,8 +48,7 @@
     "react-slugify": "^2.0.1",
     "styled-components": ">=4.1",
     "styled-icons": "^10.2.1",
-    "tinacms": "^0.18.4",
-    "yarn": "^1.22.4"
+    "tinacms": "^0.18.4"
   },
   "devDependencies": {
     "prettier": "^2.0.4"
